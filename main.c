@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * board324t1.c
  *
@@ -25,9 +24,9 @@
 /*
  *	Wichtige Systemvariablen
  */
-uint8_t ticks;	//Anzahl der Ticks, wird alle 10ms um 1 erhöht (Zeitmessung)
-uint16_t sek;	//Vergangene Zeit in Sekunden, läuft nach ca. 18 Stunden über (wird wieder 0)
-uint16_t m_r_ticks, m_l_ticks;		//Anzahl der Durchläufe des Räder-Löcher
+uint8_t ticks;	//Anzahl der Ticks, wird alle 10ms um 1 erhï¿½ht (Zeitmessung)
+uint16_t sek;	//Vergangene Zeit in Sekunden, lï¿½uft nach ca. 18 Stunden ï¿½ber (wird wieder 0)
+uint16_t m_r_ticks, m_l_ticks;		//Anzahl der Durchlï¿½ufe des Rï¿½der-Lï¿½cher
 
 /*
  *	Eigene Variablen
@@ -50,7 +49,7 @@ int main(void)
 	while(1)		//Alles innerhalb der while Schleife wird immer wieder wiederholt
     {	
 		
-		if (~PINB & 0x01)			//Wenn der invertierte Wert des ersten Bits in PINB 1 ist, dann (also wenn der Button gedrückt wird)
+		if (~PINB & 0x01)			//Wenn der invertierte Wert des ersten Bits in PINB 1 ist, dann (also wenn der Button gedrï¿½ckt wird)
 		{
 			led1(AN);				//Mach die LEDs 1 und 3 an
 			led3(AN);
@@ -61,7 +60,7 @@ int main(void)
 			led3(AUS);
 			led2(AN);
 			led4(AN);
-			m_r(255,1);				//Richtungen ändern
+			m_r(255,1);				//Richtungen ï¿½ndern
 			m_l(255,0);
 			_delay_ms(500);			//und wieder 500ms in die andere Richtung
 			m_r(0,0);				//Motoren aus
@@ -133,4 +132,3 @@ int main (void)				// Hauptprogramm, hier startet der Mikrocontroller
 	}					// Ende der Endlosschleife (Es wird wieder zu "while(1)" gesprungen)
 	return 0;			// Wird nie erreicht, aber ohne schreibt der GCC eine Warnung
 }
->>>>>>> 9317b0373e87ab30e3acc8ed54aed22f55346d56
